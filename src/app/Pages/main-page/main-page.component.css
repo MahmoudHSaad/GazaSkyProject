@@ -1,0 +1,50 @@
+.card-body {
+    text-align: left !important;
+}
+
+.card[name="even"] {
+    background-color: #0181ab38;
+    box-shadow: 0px 0px 10px 5px #fc6e01b4;
+    border: 0;
+    font-family: Milliard;
+}
+
+.card[name="even"] a {
+    font-family: EduVIC;
+    background-color: #fc6e01da;
+    color: white;
+    border: none;
+}
+
+.card[name="odd"] a {
+    font-family: EduVIC;
+    background-color: #0181abd8;
+    color: white;
+    border: none;
+}
+
+.card[name="odd"] {
+    background-color: #fc6e014b;
+    box-shadow: 0px 0px 10px 5px #0181abb0;
+    border: 0;
+    font-family: Milliard;
+}
+
+.card p {
+    font-size: 14px;
+    margin-top: 20px;
+    font-weight: 400;
+}
+
+.card h5.card-title {
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cardActive:hover {
+    transform: scale(1.03);
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}

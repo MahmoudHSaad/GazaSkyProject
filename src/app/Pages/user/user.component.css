@@ -1,0 +1,51 @@
+.actions img {
+    cursor: pointer;
+    margin: 0px 3px;
+}
+
+thead tr th {
+    background-color: #0181abd8;
+    color: #f3f8faea;
+}
+
+tbody tr {
+    background-color: #a9eaff34;
+}
+
+img.add,
+img.back {
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.modal-content {
+    padding: 0px 50px 20px 50px;
+}
+
+.dataForm {
+    text-align: left !important;
+    background-color: #a9eaff34;
+    border-radius: 20px;
+    border: 2px solid#a9eaffe5;
+}
+
+button {
+    background-color: #017ba5;
+    color: white;
+    width: 120px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background-color: #017ba5 !important;
+}
+
+@media (min-width: 576px) {
+    .modal-dialog {
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 70% !important;
+        padding: 35px !important;
+    }
+}
