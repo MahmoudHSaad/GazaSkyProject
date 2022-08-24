@@ -1,0 +1,39 @@
+<h3 class="mt-4 mb-5">
+    {{title}}
+</h3>
+<div class="d-flex justify-content-between align-items-end">
+    <img class="back" src="../../../assets/Imges/back.svg" width="30" height="30" routerLink="/UsersAssignTow/mainPage">
+</div>
+
+
+<form class="row g-3 dataForm" [formGroup]="FormAddUsers" (ngSubmit)="save()">
+    <div class="col-md-12">
+        <label for="inputEmail4" class="form-label">Full Name</label>
+        <input type="text" class="form-control mt-3" formControlName="name" required>
+        <!-- || FormAddUsers.controls['name'].dirty &&
+        FormAddUsers.controls['name'].touched&& FormAddUsers.controls['name'].errors  -->
+        <span class="text-danger mt-5" *ngIf="FormAddUsers.controls['name'].invalid &&  !FormAddUsers.controls['name'].dirty"> 
+            This field is required, Please fill it </span>
+
+        <span class="text-danger mt-5" *ngIf="FormAddUsers.controls['name'].dirty &&
+        FormAddUsers.controls['name'].errors ">Min length of Name  is 5 Letters</span>
+
+
+    </div>
+    <div class="col-md-12">
+        <label for="inputEmail4" class="form-label">Description  </label>
+        <textarea class="form-control" rows="6" formControlName="description" required></textarea>
+        <span class="text-danger mt-5" *ngIf="FormAddUsers.controls['description'].invalid &&  !FormAddUsers.controls['description'].dirty"> 
+            This field is required, Please fill it </span>
+
+
+        <span class="text-danger mt-5" *ngIf="FormAddUsers.controls['description'].dirty &&
+        FormAddUsers.controls['description'].errors ">Min length of Name  is 50 Letters</span>
+
+    </div>
+
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary" *ngIf="mood == 'add'" [disabled]="FormAddUsers.invalid"> Add  </button>
+        <button type="submit" class="btn btn-primary" *ngIf="mood == 'edit'" [disabled]="FormAddUsers.invalid"> Edit  </button>
+    </div>
+</form>

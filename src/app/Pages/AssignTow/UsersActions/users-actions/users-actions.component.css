@@ -1,0 +1,23 @@
+.dataForm {
+    padding: 0px 20px 30px 50px !important;
+    text-align: left !important;
+    background-color: #a9eaff34;
+    border-radius: 20px;
+    margin-top: 20px;
+    border: 2px solid#a9eaffe5;
+}
+
+img.back {
+    cursor: pointer;
+}
+
+button {
+    background-color: #017ba5;
+    color: white;
+    width: 120px;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #017ba5 !important;
+}
