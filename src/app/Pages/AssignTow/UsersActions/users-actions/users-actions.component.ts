@@ -19,7 +19,7 @@ data:any;
   constructor(private activatedRoute: ActivatedRoute , private UsersService:UsersService ,
     private Router:Router) {
     let getMood = this.activatedRoute.snapshot.params;
-    console.log(getMood);
+
     this.FormAddUsers = new FormGroup({
  
       id: new FormControl(""),
@@ -47,7 +47,7 @@ data:any;
    get f() { return this.FormAddUsers.controls; }
 
   save(){
- console.log(this.f);
+
  
 
     switch (this.mood) {
@@ -64,7 +64,7 @@ data:any;
    }
 
   ngOnInit(): void {
-    console.log(this.f);
+
   }
 
 }

@@ -29,11 +29,11 @@ addUser(value:any){
   value.id= this.dataSource.length + 1;
   this.dataSource.push(value);
 }
+
 editUser(value:any){
   var foundIndex = this.dataSource.findIndex(x => x.id == value.id);
   this.dataSource[foundIndex] =value;
-  console.log(value.id);
-  console.log(value);
+
   
  
  return   this.dataSource[foundIndex] =value;

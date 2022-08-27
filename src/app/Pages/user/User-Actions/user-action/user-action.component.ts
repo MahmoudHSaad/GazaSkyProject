@@ -39,13 +39,13 @@ this.FormAddUsers = new FormGroup({
 
 this.dataAsString = localStorage.getItem("data");
 this.dataSource = JSON.parse(this.dataAsString);
-console.log(this.dataSource.length );
+
 
    }
    
    save(){
 
-    console.log(this.FormAddUsers.value);
+
     
    }
 

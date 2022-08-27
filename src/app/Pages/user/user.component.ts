@@ -21,7 +21,7 @@ dataAsString:any;
 firstTime:boolean=true
   constructor() {
   let x:any =localStorage.getItem('data')
-console.log(localStorage.getItem('data'));
+
 
 
   this.dataSource =[
@@ -66,7 +66,7 @@ switch (localStorage.getItem('data')) {
 
    }
    editMood(id:number){
-    console.log(id);
+
     
     this.mood = "edit"
     this.titleMood="Edit User Data";
@@ -122,7 +122,7 @@ switch (localStorage.getItem('data')) {
   }
 
   ngOnInit(): void {
-    console.log("in");
+
     
   }
 }
