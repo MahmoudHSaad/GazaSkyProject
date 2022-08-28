@@ -3,23 +3,33 @@
 </h3>
 <div class="d-flex justify-content-between align-items-center">
     <img class="back" src="./assets/Imges/back.svg" width="30" height="30" routerLink="/Home">
+    <img class="back" src="./assets/Imges/file.png" width="30" height="30" title="Users File" routerLink="//UsersAssignTow/files">
     <img class="add" src="./assets/Imges/add.svg" width="30" height="30" routerLink="/UsersAssignTow/Actions/add">
 </div>
-<table class="table">
+<table class="table mt-4">
     <thead>
         <tr>
             <th scope="col">#</th>
-            <th scope="col">Name </th>
-            <th scope="col">Description</th>
-            <th scope="col">Actions</th>
+            <th scope="col">First </th>
+            <th scope="col">Last</th>
+            <th scope="col">Birthdate </th>
+            <th scope="col">Email </th>
+            <th scope="col">Phone</th>
+            <th scope="col">Address </th>
+            <th scope="col">Action </th>
 
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let data of dataSourceCopy , let i = index ">
             <th scope="row">{{data.id}}</th>
-            <td>{{data.name}}</td>
-            <td class="w-50">{{data.description}}</td>
+            <td>{{data.firstname}}</td>
+            <td>{{data.lastname}}</td>
+            <td>{{data.birthdate}}</td>
+            <td>{{data.email}}</td>
+            <td>{{data.phone}}</td>
+            <td>{{data.address}}</td>
+
 
             <td class="actions">
                 <img src="./assets/Imges/edit.svg" width="30" height="25" routerLink="/UsersAssignTow/Actions/edit/{{data.id}}">

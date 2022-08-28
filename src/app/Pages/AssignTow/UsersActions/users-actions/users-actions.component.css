@@ -21,3 +21,7 @@ button {
 button:hover {
     background-color: #017ba5 !important;
 }
+
+form img {
+    cursor: pointer;
+}

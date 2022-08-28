@@ -1,0 +1,30 @@
+<h3 class="mt-4 mb-5">
+    {{title}}
+</h3>
+<div class="d-flex justify-content-start align-items-center">
+    <img class="back" src="./assets/Imges/back.svg" width="30" height="30" routerLink="/UsersAssignTow/mainPage">
+
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name </th>
+            <th scope="col ">Description </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of dataSourceCopy , let i = index ">
+            <th scope="row">{{data.id}}</th>
+            <td>{{data.name}}</td>
+            <td>{{data.description}}</td>
+
+
+        </tr>
+        <tr *ngIf="dataSourceCopy.length == 0">
+            <td colspan="8"> No Data</td>
+        </tr>
+
+    </tbody>
+</table>

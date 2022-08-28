@@ -11,9 +11,14 @@ export class UsersService {
   constructor() {
     this.dataSource =[
       {
+
         id:1,
-        name :"Mahmoud Hasan Ali Saad",
-        description : "Fornt-End Web Developer - Angular",
+        address:"Palestine - Gaza ",
+        birthdate:"20/07/1995",
+        email:"mahmoud33saad@gmail.com",
+        firstname :"Mahmoud",
+        lastname : "Saad",
+        phone : "0595394370", 
       }
     ]   
    }

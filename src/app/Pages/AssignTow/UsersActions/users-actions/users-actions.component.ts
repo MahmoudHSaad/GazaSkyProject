@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Users } from '../../users.model';
 import { UsersService } from '../../users.service';
 
 @Component({
@@ -23,8 +22,12 @@ data:any;
     this.FormAddUsers = new FormGroup({
  
       id: new FormControl(""),
-      name: new FormControl("",[Validators.required , Validators.minLength(5)]),
-      description: new FormControl("",[Validators.required , Validators.minLength(50)]),
+      firstname: new FormControl("",[Validators.required]),
+      lastname: new FormControl("",[Validators.required]),
+      email: new FormControl("",[Validators.required , Validators.email]),
+      address: new FormControl("",[Validators.required]),
+      birthdate: new FormControl("",[Validators.required]),
+      phone: new FormControl("",[Validators.maxLength(9) , Validators.required , Validators.minLength(9)]),
  
     });
     switch (Object.keys(getMood).length) {
