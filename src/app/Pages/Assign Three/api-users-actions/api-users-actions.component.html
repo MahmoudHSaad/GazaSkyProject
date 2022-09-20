@@ -1,0 +1,56 @@
+<h3 class="mt-4 mb-5">
+    {{title}}
+</h3>
+<div class="d-flex justify-content-between align-items-end">
+    <img class="back" src="./assets/Imges/back.svg" width="30" height="30" routerLink="/UsersAssignThree/mainPageApiUsers">
+</div>
+
+<form class="row g-3 dataForm" [formGroup]="FormAddUsers" (ngSubmit)="save()">
+
+    <div class="col-md-6 mb-3">
+        <label for="inputEmail4" class="form-label">User Id</label>
+        <input type="number" class="form-control" formControlName="id">
+        <span class="text-danger mt-5" *ngIf="FormAddUsers.controls['first_name'].invalid  && FormAddUsers.controls['first_name'].touched"> 
+            This field is required, Please fill it </span>
+    </div>
+
+    <div class="col-md-6 mb-3">
+        <label for="inputEmail4" class="form-label">First Name</label>
+        <input type="text" class="form-control" formControlName="first_name">
+        <span class="text-danger mt-5" *ngIf="FormAddUsers.controls['first_name'].invalid  && FormAddUsers.controls['first_name'].touched"> 
+            This field is required, Please fill it </span>
+    </div>
+    <div class="col-md-6 mb-3">
+        <label for="inputEmail4" class="form-label">Last Name</label>
+        <input type="text" class="form-control" formControlName="last_name">
+        <span class="text-danger mt-5" *ngIf="FormAddUsers.controls['last_name'].invalid  
+        && FormAddUsers.controls['last_name'].touched"> 
+            This field is required, Please fill it </span>
+    </div>
+
+    <div class="col-md-6 mb-3">
+        <label for="inputEmail4" class="form-label">Email</label>
+        <input type="email" class="form-control" formControlName="email">
+        <span class="text-danger mt-5" *ngIf="FormAddUsers.controls['email'].invalid  
+        && FormAddUsers.controls['email'].touched"> 
+            This field is required, Please fill it </span>
+        <span class="text-danger mt-5" *ngIf="FormAddUsers.controls['email'].errors && 
+        FormAddUsers.controls['email'].dirty"> 
+            This field is required, Please fill it as Email </span>
+
+    </div>
+    <div class="col-md-12s mb-3">
+        <label for="inputEmail4" class="form-label">Avatar link</label>
+        <input type="tel" class="form-control" formControlName="avatar">
+        <span class="text-danger mt-5" *ngIf="FormAddUsers.controls['avatar'].invalid && 
+        FormAddUsers.controls['avatar'].touched "> 
+           This field is required, Please fill it </span>
+
+    </div>
+
+
+    <div class="col-6 mb-3">
+        <button type="submit" class="btn btn-primary" *ngIf="mood == 'add'" [disabled]="FormAddUsers.invalid"> Add  </button>
+        <button type="submit" class="btn btn-primary" *ngIf="mood == 'edit'" [disabled]="FormAddUsers.invalid"> Edit  </button>
+    </div>
+</form>

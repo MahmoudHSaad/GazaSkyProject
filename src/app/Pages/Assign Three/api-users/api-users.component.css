@@ -1,0 +1,24 @@
+img {
+    cursor: pointer;
+}
+
+.personImg {
+    border-radius: 45px;
+    box-shadow: 5px 5px 10px #e7f3f6;
+    width: 128px;
+    height: 128px;
+}
+
+td:not(.imgTd),
+th.idTd {
+    padding-top: 5% !important;
+}
+
+button.selecting {
+    border-radius: 5px;
+    border: none;
+    height: 40px;
+    background-color: #fc6f01;
+    padding: 5px 15px;
+    color: white;
+}

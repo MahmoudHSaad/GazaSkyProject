@@ -18,6 +18,8 @@ data:any;
   constructor(private activatedRoute: ActivatedRoute , private UsersService:UsersService ,
     private Router:Router) {
     let getMood = this.activatedRoute.snapshot.params;
+    console.log(getMood);
+    
 
     this.FormAddUsers = new FormGroup({
  
@@ -50,9 +52,6 @@ data:any;
    get f() { return this.FormAddUsers.controls; }
 
   save(){
-
- 
-
     switch (this.mood) {
       case "add":
   this.UsersService.addUser(this.FormAddUsers.value);
